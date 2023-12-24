@@ -14,13 +14,14 @@ export const File1 = () => {
   when dependency array is passed then the code inside useEffect renders only once. */
 
   useEffect(()=> {
-    console.log("hello")
+    // console.log("hello")
     // we are doing some side effect by changing the dom
     document.title = `value changed to ${value}`
   }, [value])    // if we pass empty array inside dependency means it will only render once & if we pass the value inside dependency then it will rerenders everytime the value changes.
 
   return (
     <>
+    <h1>UseEffect Hook:</h1>
     <h1>{value}</h1>
     <button onClick={() => setValue((prevalue) => prevalue + 1)}>Click me</button>
     </>
